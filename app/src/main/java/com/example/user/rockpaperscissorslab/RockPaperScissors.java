@@ -14,30 +14,33 @@ public class RockPaperScissors extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rock_paper_scissors);
+
         playerTextView = findViewById(R.id.text_player_choice);
         androidTextView = findViewById(R.id.text_android_choice);
         textResult = findViewById(R.id.text_result);
     }
 
-    public void onRockButtonClick(View view) {
-        ResultType result = play(ChoiceType.ROCK);
-        textResult.setText("Player " + result.getResult());
-    }
+    private void play(ChoiceType playerChoice) {
+        playerTextView.setText("Player's choice: " + playerChoice.toString().toLowerCase());
 
-    public void onPaperButtonClick(View view) {
-        ResultType result = play(ChoiceType.PAPER);
-        textResult.setText("Player " + result.getResult());
-    }
-
-    public void onScissorsButtonClick(View view) {
-        ResultType result = play(ChoiceType.SCISSORS);
-        textResult.setText("Player " + result.getResult());
-    }
-
-    private ResultType play(ChoiceType player_choice) {
         ChoiceType androidChoice = ChoiceType.random();
-        playerTextView.setText("Player's choice: " + player_choice.toString().toLowerCase());
         androidTextView.setText("Android's choice: " + androidChoice.toString().toLowerCase());
-        return Game.getResult(player_choice, androidChoice);
+
+        ResultType result = Game.getResult(playerChoice, androidChoice);
+        textResult.setText("Player " + result.getResult());
+    }
+
+    public void onMakeButtonChoice(View view) {
+        switch (view.getId()) {
+            case R.id.rock_button:
+                play(ChoiceType.ROCK);
+                break;
+            case R.id.paper_button:
+                play(ChoiceType.PAPER);
+                break;
+            case R.id.scissors_button:
+                play(ChoiceType.SCISSORS);
+                break;
+        }
     }
 }
