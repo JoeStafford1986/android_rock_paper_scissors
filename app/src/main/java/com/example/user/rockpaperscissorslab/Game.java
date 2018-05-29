@@ -5,9 +5,6 @@ import android.widget.Switch;
 public class Game {
 
     public static ResultType play(ChoiceType player_choice, ChoiceType android_choice) {
-        if (player_choice == android_choice) {
-            return ResultType.DRAW;
-        }
         switch(player_choice) {
             case ROCK:
                 switch(android_choice){
@@ -16,7 +13,6 @@ public class Game {
                 }
         }
 
-
-        return ResultType.WIN;
+        return ResultType.DRAW;
     }
 }
