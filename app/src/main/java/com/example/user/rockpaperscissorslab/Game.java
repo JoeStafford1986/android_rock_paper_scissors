@@ -4,10 +4,10 @@ import android.widget.Switch;
 
 public class Game {
 
-    public static ResultType getResult(ChoiceType player_choice) {
-        ChoiceType android_choice = ChoiceType.random();
-        return getResult(player_choice, android_choice);
-    }
+//    public static ResultType play(ChoiceType player_choice) {
+//        ChoiceType android_choice = ChoiceType.random();
+//        return getResult(player_choice, android_choice);
+//    }
 
     public static ResultType getResult(ChoiceType player_choice, ChoiceType android_choice) {
         switch(player_choice) {
