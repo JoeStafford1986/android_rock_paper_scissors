@@ -17,4 +17,9 @@ public class GameTest {
         assertEquals(ResultType.WIN, Game.play(ChoiceType.ROCK, ChoiceType.SCISSOR));
     }
 
+    @Test
+    public void canLose(){
+        assertEquals(ResultType.LOSE, Game.play(ChoiceType.ROCK, ChoiceType.PAPER));
+    }
+
 }

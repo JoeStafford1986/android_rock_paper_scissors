@@ -12,6 +12,7 @@ public class Game {
             case ROCK:
                 switch(android_choice){
                     case SCISSOR: return ResultType.WIN;
+                    case PAPER: return ResultType.LOSE;
                 }
         }
 
