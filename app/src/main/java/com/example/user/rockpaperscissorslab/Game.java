@@ -2,15 +2,10 @@ package com.example.user.rockpaperscissorslab;
 
 public class Game {
 
-//    public static ResultType play(ChoiceType player_choice) {
-//        ChoiceType android_choice = ChoiceType.random();
-//        return getResult(player_choice, android_choice);
-//    }
-
     public static ResultType getResult(ChoiceType player_choice, ChoiceType android_choice) {
         switch(player_choice) {
             case ROCK:
-                switch(android_choice){
+                switch(android_choice) {
                     case SCISSORS: return ResultType.WIN;
                     case PAPER: return ResultType.LOSE;
                 }
@@ -22,7 +17,7 @@ public class Game {
                 }
                 break;
             case PAPER:
-                switch (android_choice){
+                switch (android_choice) {
                     case SCISSORS: return ResultType.LOSE;
                     case ROCK: return ResultType.WIN;
                 }
