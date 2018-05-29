@@ -12,4 +12,9 @@ public class GameTest {
         assertEquals(ResultType.DRAW, Game.play(ChoiceType.ROCK, ChoiceType.ROCK));
     }
 
+    @Test
+    public void canWin(){
+        assertEquals(ResultType.WIN, Game.play(ChoiceType.ROCK, ChoiceType.SCISSOR));
+    }
+
 }
