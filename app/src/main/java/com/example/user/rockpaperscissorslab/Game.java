@@ -11,16 +11,19 @@ public class Game {
                     case SCISSOR: return ResultType.WIN;
                     case PAPER: return ResultType.LOSE;
                 }
+                break;
             case SCISSOR:
                 switch(android_choice) {
                     case PAPER: return ResultType.WIN;
                     case ROCK: return ResultType.LOSE;
                 }
+                break;
             case PAPER:
                 switch (android_choice){
                     case SCISSOR: return ResultType.LOSE;
                     case ROCK: return ResultType.WIN;
                 }
+                break;
         }
         return ResultType.DRAW;
     }
