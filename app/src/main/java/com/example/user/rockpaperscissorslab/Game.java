@@ -1,7 +1,5 @@
 package com.example.user.rockpaperscissorslab;
 
-import android.widget.Switch;
-
 public class Game {
 
 //    public static ResultType play(ChoiceType player_choice) {
@@ -13,11 +11,11 @@ public class Game {
         switch(player_choice) {
             case ROCK:
                 switch(android_choice){
-                    case SCISSOR: return ResultType.WIN;
+                    case SCISSORS: return ResultType.WIN;
                     case PAPER: return ResultType.LOSE;
                 }
                 break;
-            case SCISSOR:
+            case SCISSORS:
                 switch(android_choice) {
                     case PAPER: return ResultType.WIN;
                     case ROCK: return ResultType.LOSE;
@@ -25,7 +23,7 @@ public class Game {
                 break;
             case PAPER:
                 switch (android_choice){
-                    case SCISSOR: return ResultType.LOSE;
+                    case SCISSORS: return ResultType.LOSE;
                     case ROCK: return ResultType.WIN;
                 }
                 break;

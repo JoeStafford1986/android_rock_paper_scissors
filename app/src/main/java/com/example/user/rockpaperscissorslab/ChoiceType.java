@@ -5,7 +5,7 @@ import java.util.Random;
 public enum ChoiceType {
     ROCK,
     PAPER,
-    SCISSOR;
+    SCISSORS;
 
     private static Random randomer = new Random();
 

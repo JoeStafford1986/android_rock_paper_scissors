@@ -13,7 +13,7 @@ public class GameTest {
 
     @Test
     public void canWinWithRock() {
-        assertEquals(ResultType.WIN, Game.getResult(ChoiceType.ROCK, ChoiceType.SCISSOR));
+        assertEquals(ResultType.WIN, Game.getResult(ChoiceType.ROCK, ChoiceType.SCISSORS));
     }
 
     @Test
@@ -33,22 +33,22 @@ public class GameTest {
 
     @Test
     public void canLoseWithPaper() {
-        assertEquals(ResultType.LOSE, Game.getResult(ChoiceType.PAPER, ChoiceType.SCISSOR));
+        assertEquals(ResultType.LOSE, Game.getResult(ChoiceType.PAPER, ChoiceType.SCISSORS));
     }
 
     @Test
     public void canDrawWithScissor() {
-        assertEquals(ResultType.DRAW, Game.getResult(ChoiceType.SCISSOR, ChoiceType.SCISSOR));
+        assertEquals(ResultType.DRAW, Game.getResult(ChoiceType.SCISSORS, ChoiceType.SCISSORS));
     }
 
     @Test
     public void canWinWithScissor() {
-        assertEquals(ResultType.WIN, Game.getResult(ChoiceType.SCISSOR, ChoiceType.PAPER));
+        assertEquals(ResultType.WIN, Game.getResult(ChoiceType.SCISSORS, ChoiceType.PAPER));
     }
 
     @Test
     public void canLoseWithScissor() {
-        assertEquals(ResultType.LOSE, Game.getResult(ChoiceType.SCISSOR, ChoiceType.ROCK));
+        assertEquals(ResultType.LOSE, Game.getResult(ChoiceType.SCISSORS, ChoiceType.ROCK));
     }
 
 

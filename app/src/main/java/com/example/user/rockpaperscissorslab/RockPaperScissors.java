@@ -24,8 +24,20 @@ public class RockPaperScissors extends AppCompatActivity {
         textResult.setText("Player " + result.getResult());
     }
 
+    public void onPaperButtonClick(View view) {
+        ResultType result = play(ChoiceType.PAPER);
+        textResult.setText("Player " + result.getResult());
+    }
+
+    public void onScissorsButtonClick(View view) {
+        ResultType result = play(ChoiceType.SCISSORS);
+        textResult.setText("Player " + result.getResult());
+    }
+
     private ResultType play(ChoiceType player_choice) {
         ChoiceType androidChoice = ChoiceType.random();
+        playerTextView.setText("Player's choice: " + player_choice.toString().toLowerCase());
+        androidTextView.setText("Android's choice: " + androidChoice.toString().toLowerCase());
         return Game.getResult(player_choice, androidChoice);
     }
 }
